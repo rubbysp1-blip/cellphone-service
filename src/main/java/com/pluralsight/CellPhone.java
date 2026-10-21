@@ -7,12 +7,12 @@ public class CellPhone {
     private String phoneNumber;
     private String ownerName;
 
-    public void cellPhone(){
-        serialNumber = 0;
-        phoneModel = "";
-        carrier = "";
-        phoneNumber = "";
-        ownerName = "";
+    public CellPhone(){
+        this.serialNumber = 0;
+        this.phoneModel = "";
+        this.carrier = "";
+        this.phoneNumber = "";
+        this.ownerName = "";
     }
 
     public int getSerialNumber(){
