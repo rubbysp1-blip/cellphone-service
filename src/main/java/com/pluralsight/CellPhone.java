@@ -26,10 +26,27 @@ public class CellPhone {
 
     }
 
+    public CellPhone(String phoneModel, int serialNumber, String carrier, String phoneNumber, String ownerName){
+        this.serialNumber = serialNumber;
+        this.phoneModel = phoneModel;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.ownerName = ownerName;
+
+    }
+
     public void dial(String phoneNumber){
         this.dial = "Owner's phone is calling " + phoneNumber;
     }
+//    In your CellPhone class, add an overloaded version of the dial method. The second
+//    method should accept a CellPhone object as an input parameter. This overloaded
+//    method should get the phone number of the input parameter.
+//    Your class should have 2 methods that look similar to this.
+//    public void dial(String phoneNumber){ ... }
+//    public void dial(CellPhone phone) { ... }
+    public void dial(CellPhone phone){
 
+    }
     public String getDial(){
         return this.dial;
     }
