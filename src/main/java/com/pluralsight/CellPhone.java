@@ -6,6 +6,7 @@ public class CellPhone {
     private String carrier;
     private String phoneNumber;
     private String ownerName;
+    private String dial;
 
     public CellPhone(){
         this.serialNumber = 0;
@@ -13,8 +14,25 @@ public class CellPhone {
         this.carrier = "";
         this.phoneNumber = "";
         this.ownerName = "";
+        this.dial = "";
     }
 
+    public CellPhone(int serialNumber, String phoneModel, String carrier, String phoneNumber, String ownerName){
+        this.serialNumber = serialNumber;
+        this.phoneModel = phoneModel;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.ownerName = ownerName;
+
+    }
+
+    public void dial(String phoneNumber){
+        this.dial = "Owner's phone is calling " + phoneNumber;
+    }
+
+    public String getDial(){
+        return this.dial;
+    }
     public int getSerialNumber(){
         return this.serialNumber;
     }

@@ -3,23 +3,40 @@ package com.pluralsight;
 public class CellPhoneApplication {
     public static void main(String[] args) {
 
-        CellPhone phoneInfo = new CellPhone();
-//        What is the serial number? 2597153
-//        What model is the phone? iPhone 15 Pro Max
-//        Who is the carrier? Verizon
-//        What is the phone number? 888-555-1234
-//        Who is the owner of the phone? Sandr
-        phoneInfo.setSerialNumber(0);
-        phoneInfo.setPhoneModel("iphone 12");
-        phoneInfo.setCarrier("Metro");
-        phoneInfo.setPhoneNumber("936-224-8277");
-        phoneInfo.setOwnerName("Ruby");
+        CellPhone cellPhone1 = new CellPhone();
+        CellPhone cellPhone = new CellPhone(111, "iPhone 12", "Metro", "936-224-8277", "Ruby");
 
+        cellPhone1.setSerialNumber(0);
+        cellPhone1.setPhoneModel("iphone 11");
+        cellPhone1.setCarrier("T-Mobile");
+        cellPhone1.setPhoneNumber("936-224-3473");
+        cellPhone1.setOwnerName("Vanesa");
 
-        System.out.println(phoneInfo.getSerialNumber());
-        System.out.println(phoneInfo.getPhoneModel());
-        System.out.println(phoneInfo.getCarrier());
-        System.out.println(phoneInfo.getPhoneNumber());
-        System.out.println(phoneInfo.getOwnerName());
+        String phoneNum = "9362248277";
+        cellPhone1.dial(phoneNum);
+        System.out.println(cellPhone1.getDial());
+
+        cellPhone1.dial(cellPhone.getPhoneNumber());
+        cellPhone.dial(cellPhone1.getPhoneNumber());
+
+        System.out.println("\nPhone 1");
+        display(cellPhone1);
+
+        System.out.println("\nPhone 2");
+        display(cellPhone);
     }
+
+    public static void display(CellPhone phone) {
+
+        System.out.println("---------------------------------\n" +
+                "Serial Number: " + phone.getSerialNumber());
+        System.out.println("Phone Model: " + phone.getPhoneModel());
+        System.out.println("Carrier: " + phone.getCarrier());
+        System.out.println("Phone Number: " + phone.getPhoneNumber());
+        System.out.println("Owner: " + phone.getOwnerName());
+
+
+    }
+
+
 }
